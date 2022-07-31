@@ -1,22 +1,22 @@
 public class BubbleSort {
-
-    public static void bubblesort(int array[]){
-        for(int i=0;i< array.length-1;i++){
-            for(int j=0;j< array.length-i-1;j++){
-                if(array[j]>array[j+1]){
-                    int temp=array[j];
-                    array[j]=array[j+1];
-                    array[j+1]=temp;
+    public static void main(String[] args) {
+        int[] a = {10, 9, 7, 101, 23, 44, 12, 78, 34, 23};
+        for(int i=0;i<10;i++)
+        {
+            for (int j=0;j<10;j++)
+            {
+                if(a[i]<a[j])
+                {
+                    int temp = a[i];
+                    a[i]=a[j];
+                    a[j] = temp;
                 }
             }
         }
-    }
-    public static void main(String[] args) {
-        int array[]={9,1,8,2,7,3,6,4,5};
-        bubblesort(array);
-        for(int i :array){
-            System.out.println(i);
+        System.out.println("Printing Sorted List ");
+        for(int i=0;i<10;i++)
+        {
+            System.out.println(a[i]);
         }
     }
-
 }  
